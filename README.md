@@ -6,3 +6,6 @@ A series of patterns and concepts apply in Nodejs
 
 - Nodejs philosophy
 - Reactor Pattern
+- [ObserverPattern]('./platform/observerPattern/intro.md')
+
+<!-- TODO: Add a manual observer pattern  -->
