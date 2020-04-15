@@ -8,4 +8,4 @@ A series of patterns and concepts apply in Nodejs
 - Reactor Pattern
 - [ObserverPattern]('./platform/observerPattern/intro.md')
 
-<!-- TODO: Start chapter three  -->
+<!-- TODO: Start chapter four  -->
