@@ -29,7 +29,7 @@ exports.verbose = (message) => {       console.log('verbose: ' + message);
 > Its main strength is the fact that it exposes only a single functionality, which provides a clear entry point for the module, making it simpler to understand and use; it also honors the principle of small surface area very well. Also known as **substack pattern,**
 
 ```javascript
-module.exports.verbose = message => {
+module.exports.verbose = (message) => {
   console.log(`verbose: ${message}`);
 };
 ```
@@ -44,13 +44,13 @@ function Logger(name) {
   }
   this.name = name;
 }
-Logger.prototype.log = function(message) {
+Logger.prototype.log = function (message) {
   console.log(`[${this.name}] ${message}`);
 };
-Logger.prototype.info = function(message) {
+Logger.prototype.info = function (message) {
   this.log(`info: ${message}`);
 };
-Logger.prototype.verbose = function(message) {
+Logger.prototype.verbose = function (message) {
   this.log(`verbose: ${message}`);
 };
 module.exports = Logger;
@@ -63,7 +63,7 @@ function Logger(name) {
   this.count = 0;
   this.name = name;
 }
-Logger.prototype.log = function(message) {
+Logger.prototype.log = function (message) {
   this.count++;
   console.log("[" + this.name + "] " + message);
 };
@@ -93,5 +93,3 @@ logger.customMessage();
 ### The observer pattern
 
 > Pattern (observer) defines an object (called subject), which can notify a set of observers (or listeners), when a change in its state happens.
-
-<!-- TODO: Add more The obsever pattern  -->
