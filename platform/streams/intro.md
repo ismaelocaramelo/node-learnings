@@ -30,8 +30,9 @@ There are two major categories:
 - Spatial efficiency
 - Time efficiency
 - Composability
+- Flexibility
 
-### Spatial efficiency
+### Spatial efficiency
 
 Streams allow us to do things that would not be possible, by buffering data and processing it all at once.
 Buffers in V8 cannot be bigger than 0x3FFFFFFF bytes (a little bit less than 1GB).
@@ -45,11 +46,11 @@ There is no need to wait for the previous set of tasks to be completed; instead,
 The pipe() method, which allows us to connect the different processing units, each being responsible for one single functionality in perfect Node.js style.
 The only prerequisite is that the next stream in the pipeline has to support the data type produced by the previous stream, which can be either binary, text, or even objects.
 
-## Flexibility
+### Flexibility
 
 One of the reasons why streams are so flexible is the fact that they can not only handle binary data, but almost any JavaScript value; in fact, they can support two operating modes:
 
 - Binary mode: This mode is where data is streamed in the form of chunks, such as buffers or strings
 - Object mode: This mode is where the streaming data is treated as a sequence of discrete objects (allowing us to use almost any JavaScript value)
 
-<!-- TODO: Continue with Back-pressure and examples of duplex and transform -->
+<!-- TODO: Examples of duplex and transform -->
